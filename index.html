@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <!-- Optional: Add CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <form id="task-form">
+            <input id="task-title" type="text" placeholder="Task title">
+            <input id="task-desc" type="text" placeholder="Description">
+            <button type="submit">Add Task</button>
+        </form>
+        <div>
+            <button id="filter-all">All</button>
+            <button id="filter-active">Active</button>
+            <button id="filter-completed">Completed</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+
+    <!-- Task Template -->
+    <script type="text/template" id="task-template">
+        <input type="checkbox" class="toggle" <%= completed ? 'checked' : '' %>>
+        <span class="title"><%= title %></span> - 
+        <span class="description"><%= description %></span>
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+    </script>
+
+    <!-- Load Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage/2.0.0/backbone.localStorage-min.js"></script>
+    <!-- Your Code -->
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Main app container */
+#app {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Task form styling */
+#task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-title, #task-desc {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+#task-title:focus, #task-desc:focus {
+    border-color: #007bff;
+}
+
+#task-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#task-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Filter buttons */
+#app > div {
+    margin-bottom: 20px;
+}
+
+#filter-all, #filter-active, #filter-completed {
+    padding: 6px 12px;
+    margin-right: 10px;
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#filter-all:hover, #filter-active:hover, #filter-completed:hover {
+    background-color: #ced4da;
+}
+
+/* Task list styling */
+#task-list {
+    list-style: none;
+}
+
+/* Individual task items */
+#task-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#task-list li:last-child {
+    border-bottom: none;
+}
+
+/* Checkbox */
+#task-list .toggle {
+    margin-right: 10px;
+}
+
+/* Task title and description */
+#task-list .title {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#task-list .description {
+    color: #666;
+    flex-grow: 1;
+}
+
+/* Completed tasks */
+#task-list .toggle:checked + .title {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#task-list .toggle:checked + .title + span + .description {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Edit and Delete buttons */
+#task-list .edit, #task-list .delete {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#task-list .edit {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+#task-list .edit:hover {
+    background-color: #e0a800;
+}
+
+#task-list .delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#task-list .delete:hover {
+    background-color: #c82333;
+}
